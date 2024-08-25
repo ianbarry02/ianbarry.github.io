@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ian Barry | Custom Lab Programs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Ian Barry</a>
+					</header>
+
+				<!-- Nav -->
+				<!--nav id="nav">
+					<ul class="links">
+						<li class="active"><a href="index.html">Projects</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="cv.html">Resume & CV</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/barryian/" target = "blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ianbarry02" target = "blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Custom Lab Programs</h1>
+									<p>Programs I've created to solve a variety of small-scale problems or streamline workflows in laboratory settings.</p>
+								</header>
+
+								<section id="first" class="main special">
+									<section class="tiles">
+										<article class="style1">
+											<span class="image">
+												<img src="images/clu.png" alt="" />
+											</span>
+											<a href="#clu">
+												<h2 style="color: white;">CLU</h2>
+											</a>
+										</article>
+										<article class="style2">
+											<span class="image">
+												<img src="images/tron.png" alt="" />
+											</span>
+											<a href="#tron">
+												<h2 style="color: white;">TRON</h2>
+											</a>
+										</article>
+										<!--article class="style3">
+											<span class="image">
+												<img src="images/clu.png" alt="" />
+											</span>
+											<a href="#final-product">
+												<h2 style="color: white;">Final Product</h2>
+											</a>
+										</article-->
+									</section>
+						</section>
+						</section>
+						
+						<section class="post">
+							<h2 id="clu">Chimpanzee Locomotion Utility (CLU)</h2>
+									<p>A MatLab program that utilizes user input to calculate the speed of a chimpanzee stride expressed in terms of tibia lengths per second.</p>
+								<br />
+								
+								<p><span class="image left"><img src="images/clu.png" alt="" /></span>At left: CLU in use. Demo chimpanzee image courtesy of iStock. I created this simple MatLab app in conjunction with a data-sharing collaboration between James Madison University and a local high school. This app was specifically designed to facilitate a high school student's analysis of chimpanzee video data for their school's science fair.</p>
+								<br />
+								<br />
+								
+								<h3>How to use CLU</h3>
+								<ol>
+									<li>Open the .mlapp file in MatLab</li>
+									<li>Click "Select Image" and choose a screenshot of a video frame in which the chimp's stride start and end points and one tibia are fully visible</li>
+									<li>Click "Tibia Length" and move the new line on the image until its endpoints are aligned with the proximal and distal ends of the tibia</li>
+									<li>Type the resulting measurement (in pixels) into the box labeled "Tibia"</li>
+									<li>Click "Stride Length" and move the new line on the image until its endpoints are aligned with the start and end point of the chimp's stride</li>
+									<li>Type the resulting measurement (in pixels) into the box labeled "Stride"</li>
+									<li>Type the duration of the stride (in seconds) into the box labeled "Stride Duration"</li>
+									<li>Click the "Calc. Stride/Tibia" button to calculate the distance the chimp travelled expressed as number of tibia lengths</li>
+									<li>Click the "Calc. Relative Speed" button to calculate the chimp's speed expressed in terms of tibia lengths travelled per second</li>
+								</ol>
+								</p><br />
+
+								<h3>Download CLU</h3>
+								<p>Click <a href="assets/clu.mlapp" download>here</a> to download the .mlapp file. GitHub files coming soon!</p>
+								<br />
+						</section>
+
+						<section class="post">
+							<h2 id="tron">Transcoding & Remuxing Operations Nucleus (TRON)</h2>
+									<p>A MatLab program that streamlines video conversion and quality comparison of converted video files in a GUI.
+									</p>
+								<br />
+								
+								<p><span class="image left"><img src="images/tron.png" alt="" /></span>At left: TRON in use. TRON uses the FFmpeg toolbox in MatLab to: 1) convert .mxf, .avi, and .mkv files to .mp4 files, and 2) generate commands that can be copied and pasted into the terminal window to compare the quality of a converted video file against the original video file. I created TRON to help an undergraduate student in a James Madison University lab easily convert MXF files to MP4 format for a video analysis project.</p>
+								<br />
+								
+								<h3>How to use TRON (video conversion)</h3>
+								<ol>
+									<li>Open the .mlapp file in MatLab</li>
+									<li>Specify your desired output directory for the converted file in the "Output directory" field</li>
+									<li>Use the "Input" button to select an input video file</li>
+									<li>Once an input file is specified, TRON converts the file and leaves "output.mp4" in the specified output directory</li>
+								</ol>
+								</p><br />
+
+								<h3>How to use TRON (video quality comparison)</h3>
+								<ol>
+									<li>Open the .mlapp file in MatLab</li>
+									<li>Specify the directory in which both the input file and the converted file are hosted in the "Shared directory pathname" field</li>
+									<li>Specify the name of the input file in the "Input file name" field</li>
+									<li>Specify the name of the converted file in the "Output file name" field</li>
+									<li>Click "Generate commands" to generate two commands in the text area to the right</li>
+									<li>Open the terminal window</li>
+									<li>Copy and paste the first command generated by TRON into the terminal window and press return to enter the directory the files are in</li>
+									<li>Copy and paste the second command generated by TRON into the terminal window and press return to initialize a quality comparison function in which FFmpeg overlays the original and converted video files with a green filter and differences are visible as light green pixels</li>
+								</ol>
+								</p><br />
+
+								<h3>Download TRON</h3>
+								<p>Click <a href="assets/tron.mlapp" download>here</a> to download the .mlapp file. A list of acknowledgements, the TRON usage manual, and the TRON .mlapp file are available on <a href="https://github.com/ianbarry02/tron" target="blank">GitHub.</a></p>
+								<br />
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">barry2em@dukes.jmu.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/barryian/" target = "blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ianbarry02" target = "blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Ian Barry 2024</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

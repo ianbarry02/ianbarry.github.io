@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ian Barry | Sonification of Sentiment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Ian Barry</a>
+					</header>
+
+				<!-- Nav -->
+				<!--nav id="nav">
+					<ul class="links">
+						<li class="active"><a href="index.html">Projects</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="cv.html">Resume & CV</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/barryian/" target = "blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ianbarry02" target = "blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Sonification of Sentiment</h1>
+									<p>For this project, I combined the power of WhisperAI, VADER, and MIDIUtil to transform TV show episodes into short songs capturing the evolution of sentiment line by line.</p>
+								</header>
+								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
+								
+								<h2>Introduction</h2>
+								<p>The inspiration for this project struck me in the middle of a stint living in an isolated (and gloriously Internet-deprived) national park in West Africa. On my next recce into town, I discovered two wonderfully comprehensive guides to representing (indeed experiencing) data by converting it into sound. The name of this process — sonification — tickled me. It sounded like a piece of jargon some fictional, sleek science genius would say on TV. With the help of the resources I found, though, I soon discovered that it was a mercifully straightforward and exciting process.</p>
+
+								<h2>The Project</h2>
+								<p>The most comprehensive and user-friendly of these resources were <a href="http://programminghistorian.org/en/lessons/sonification" target="blank">Shawn Graham’s Programming Historian guide, “The Sound of Data,”</a> and <a href="https://youtu.be/DUdLRy8i9qI?si=eXDV4-gPaEE7uYKp" target="blank">Matt Russo’s series of sonification in Python tutorials.</a> These two guides were immeasurably helpful as I ventured into the realm of sonification.</p>
+								<p>I’d cobbled together a simple transcription program using OpenAI’s Whisper some months before and I had a handful of my favorite TV shows at my disposal. I quickly discovered that running episodes from the first season of <i>Our Flag Means Death</i> through the transcription script produced a text file compatible with an earlier NLTK project that in turn outputted a dataset compatible with Russo’s sonification script. I got to work. Ultimately, my workflow went something like this:</p>
+								<ol>
+									<li>Whisper transcribes the TV episode.</li>
+									<li>NLTK tokenizes the sentences in the episode and assigns each sentence a score according to how positive, negative, or neutral the terminology it contains is.</li>
+									<li>Russo’s sonification script (modified to take the columns of my dataframe as input) maps the sentiment score output from the previous step and outputs a MIDI file containing a song produced from those notes.</li>
+								</ol>
+								<p>The Python scripts I used for this project are available in <a href="https://github.com/ianbarry02/sentiment-sonification" target="blank">this GitHub repository.</a></p>
+
+								<h4>Results: Season 1 Highlights</h4>
+								<p><i>A compilation of my favorite parts of the output files from all episodes of Season 1, compiled in chronological order using Audacity.</i></p>
+								<audio controls>
+									<source src="assets/OFMD_S1_Sentiment.mp3" type="audio/mpeg">
+								  Oops! Your browser may not support the audio element.
+								</audio>
+								<br />
+								<br />
+
+								<h2>Discussion</h2>
+								<p>The sound files produced by this project capture a wide range of nuance in the detected sentiment of each sentence in the <i>Our Flag Means Death</i> episodes I put through the pipeline. However, each episode’s corresponding sound file reaches a point where it crescendos and the frequency of notes becomes overwhelming. I’ve tentatively identified this as an erroneous cumulative effect in the data processing pipeline, but I admit I haven’t investigated why this occurs.</p>
+								<p>There are several additional sources of error earlier in the sonification process that must be addressed. First, the Whisper transcription of each episode is not perfect. Some words are erroneously transcribed and the occasional sentence is broken up incorrectly, resulting in an output of fewer or more sentences than are spoken in actuality. Second, the NLP tools I used assign words a positive, negative, or neutral score according to a predetermined lexicon, meaning they don’t take context into account. This resulted in a humorous bit of output — Izzy Hands, a character not particularly well known for being openly affectionate, spoke a sentence that produced one of the highest positive scores in the project. He was mocking another character at the time, but his use of the word “love” several times during this mockery artificially increased the positive sentiment score his words received.</p>
+
+								<h2>Conclusion</h2>
+								<p>I had a great deal of fun exploring the capabilities of Whisper and NLTK. This foray into sonification was an absolute blast. Please consider checking out Matt Russo’s and Shawn Graham’s fantastic work!</p>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">barry2em@dukes.jmu.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/barryian/" target = "blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ianbarry02" target = "blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Ian Barry 2024</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

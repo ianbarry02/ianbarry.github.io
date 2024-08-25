@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ian Barry | Scooby-Doo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Ian Barry</a>
+					</header>
+
+				<!-- Nav -->
+				<!--nav id="nav">
+					<ul class="links">
+						<li class="active"><a href="index.html">Projects</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="cv.html">Resume & CV</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/barryian/" target = "blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ianbarry02" target = "blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Evolution of Color Usage in <i>Scooby-Doo</i></h1>
+									<p>For this project, I used FFmpeg and plotly to create an interactive visualization of changes in intro sequence color usage in Hanna-Barbera's <i>Scooby-Doo</i> cartoons.</p>
+								</header>
+
+								<iframe style="border: 0; width:100%; height: 675px; overflow: auto;" src="scooby_doo_final_graph.html"></iframe>
+								<p>Above: Interactive visualization of the evolution of color usage in <i>Scooby-Doo</i> intros. Click <a href="scooby_doo_final_graph.html" target="blank">here</a> to open the visualization in a new tab.</p>
+
+								<!--div class="image main"><img src="images/pic01.jpg" alt="" /></div-->
+								<br/>
+								<br/>
+
+								<!-- Introduction & Idea Behind Project -->
+								<h2>Introduction</h2>
+								<p>My first introduction to the power of textual analysis using the terminal window overloaded my iPad baby brain. Vomiting a handful of words and symbols into a tiny box on my screen could give me a spreadsheet scoring the sentiment of sentences in my favorite book or map the importance of major characters and settings in that story. Talk about instant gratification. I owe a heartfelt thanks for this incredible discovery to Amy, longtime beloved leader of <a href="https://notevenpast.org/introducing-texas-digital-humanities/" target = "blank">Texas Student Digital Humanities (TSDH)</a>. Her tutorials also exposed me to the <a href="https://programminghistorian.org/" target="blank">Programming Historian</a>; suddenly the possibilities for what I could do with my laptop became endless. Move over, textual analysis in the terminal window. Now, I wield the power to put my favorite TV shows through the wringer.</p>
+								<p>First up: <i>Scooby-Doo</i>. In addition to bringing me joy as a kid, <i>Scooby-Doo</i> is a show with a well-documented history that's easy to trace online. To start this project, I collected a sample of <i>Scooby-Doo</i> intro sequences from over the years. These sequences are listed in Table 1 below.</p>
+								<br />
+
+								<!-- Table of Intro Sequences Used -->
+								<h4>Table 1. Scooby-Doo introductory sequences used in this project.</h4>
+
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>1st Year Broadcast</th>
+												<th>Program Title</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1969</td>
+												<td>Scooby Doo, Where Are You! (Season 1)</td>
+											</tr>
+											<tr>
+												<td>1970</td>
+												<td>Scooby Doo, Where Are You! (Season 2)</td>
+											</tr>
+											<tr>
+												<td>1972</td>
+												<td>The New Scooby-Doo Movies</td>
+											</tr>
+											<tr>
+												<td>1976</td>
+												<td>The Scooby-Doo Show</td>
+											</tr>
+											<tr>
+												<td>1977</td>
+												<td>Scooby's All-Star Laff-A-Lympics</td>
+											</tr>
+											<tr>
+												<td>1979</td>
+												<td>Scooby-Doo and Scrappy-Doo</td>
+											</tr>
+											<tr>
+												<td>1980</td>
+												<td>The Richie Rich/Scooby-Doo Show</td>
+											</tr>
+											<tr>
+												<td>1983</td>
+												<td>The New Scooby and Scrappy-Doo Show</td>
+											</tr>
+											<tr>
+												<td>1985a</td>
+												<td>The 13 Ghosts of Scooby-Doo</td>
+											</tr>
+											<tr>
+												<td>1985b</td>
+												<td>Scary Scooby Funnies</td>
+											</tr>
+											<tr>
+												<td>1988</td>
+												<td>A Pup Named Scooby-Doo</td>
+											</tr>
+											<tr>
+												<td>2002</td>
+												<td>What's New, Scooby-Doo?</td>
+											</tr>
+											<tr>
+												<td>2006</td>
+												<td>Shaggy and Scooby-Doo Get a Clue!</td>
+											</tr>
+											<tr>
+												<td>2010</td>
+												<td>Scooby-Doo! Mystery Incorporated</td>
+											</tr>
+											<tr>
+												<td>2015</td>
+												<td>Be Cool, Scooby-Doo!</td>
+											</tr>
+											<tr>
+												<td>2019</td>
+												<td>Scooby-Doo and Guess Who?</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<br />
+
+								<!-- Findings & Conclusion -->
+								<h2>The Project</h2>
+								<p>I made use of not one, but two incredible Programming Historian tutorials for this project. With help from the Programming Historian's <a href="https://doi.org/10.46430/phen0077" target="blank">"Introduction to Audiovisual Transcoding, Editing, and Color Analysis with FFmpeg"</a> tutorial, I used the power of FFmpeg to generate csv files capturing the median hue of each frame in each video file. I compiled all of the median hue data and cleaned it by removing excess values of 180, signifying a blank screen, from the beginning and end of each sequence as necessary. Then, I turned to the Programming Historian's <a href="https://doi.org/10.46430/phen0115" target="blank">"Creating Interactive Visualizations with Plotly"</a> tutorial to create an interactive line graph depicting the progression of hue usage in each intro sequence; the lines can be viewed together or independently to facilitate comparative analysis.</p>
+								<p>These tutorials are very comprehensive and provide their own code, but please feel free to take a peek at <a href="https://github.com/ianbarry02/scooby-doo" target="blank">my GitHub repository for this project</a>, where I've posted my cleaned data and the code I used to create my plotly graph! (Please note that the terminal window commands are not in my GitHub repository, as they're fully available from the Programming Historian. Please check out their epic tutorials linked in the paragraph above!)</p>
+								<br />
+
+								<h2>Discussion</h2>
+								<p>At a glance, I've noticed a few intriguing trends. Please note that I am by no means an expert in color theory or interpretation of hue, so these findings should be taken with a grain of salt. Or two. Or ten. But it seems to me that overall, median hue values diversify from predominantly cool colors to a mix of a warm and cool palette during the 1970s. Prior to 1972, the median hue values fluctuate between reds and spring greens; it's possible that the cool-colored backgrounds and the warm colors of the characters' outfits explain this variation. The 1979 <i>Scooby-Doo and Scrappy-Doo</i> intro sequence is the first to have a trough below 50, indicating a median red-orange hue for that stretch of the sequence, but is otherwise in the predominantly cool range that prevails since 1972. In the 1980s, reds and oranges have a stronger presence, but it isn't until 2002 that a warm color (between magenta and rose) dominates median hue values for a noticeable chunk of time. Otherwise, blues and greens are still the name of the game. The 2010 <i>Scooby-Doo! Mystery Incorporated</i> sequence seems to defy these rules, though, with reds, oranges, yellows, and greens forming a markedly warmer palette than the 1972 standard. The <i>Be Cool, Scooby Doo!</i> and <i>Scooby-Doo and Guess Who?</i> sequences from 2015 and 2019, respectively, also have warm median hue values that prevail over the course of the sequence, although cooler median hue values also make notable appearances.</p>
+								<p>In addition to my lack of color expertise, I've identified the following sources for error. My machine read some frames incorrectly, so those frames lack a median hue value. Although there are not many interruptions in my data that can be traces to this error, I experienced this issue with several intro sequences. In a similar vein, differences in video quality may have muddled median hue readings; although I tried to ensure the files were of equivalent quality, my eyes don't perceive them in the same way that my machine does. As epic as it would be to glance at a video and glean its degree of production quality, variation in how the files were created and posted to the Internet, etc., my laptop is responsible for reading them and noting similarities or differences in the variable I've told it to look at. Ultimately, there's room for illegitimate variation in median hue values that my computer read in. On the human side of things, my decision to manually remove the 180 values at the beginning and end of the sequences with a blank screen at those times, while intended to standardize what is displayed in my graph, may have skewed the data by failing to represent certain timing elements when those shows were being run on live television. I also wonder whether median hue value is the best information to extract from these intro sequences. Perhaps mean hue value per frame might be interesting to look at to get a feel for, say, the tone of the narrative. Median hue value was the simplest for me to calculate with the resources at my fingertips, but I've put this idea on the back burner.</p>	
+								
+								<h2>Conclusion</h2>
+								<p>All in all, I had a great deal of fun getting acquainted with the plotly library and exploring more of FFmpeg's functionality with this project. I completed this project to sharpen my coding skills in an amusing, captivating way. No part of this project is intended to be taken especially seriously. At most, I hope I can steer another soul to check out and consider supporting the intellectual bounty that is the Programming Historian!</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">barry2em@dukes.jmu.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/barryian/" target = "blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ianbarry02" target = "blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Ian Barry 2024</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
